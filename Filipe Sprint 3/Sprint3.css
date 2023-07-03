@@ -1,0 +1,623 @@
+
+
+/* Componete menu pricipal */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Header do Site*/
+  
+  .cabecalho{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .nameDisplay{
+    color: white;
+  }
+  
+  .esquerda{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 20px;
+  }
+  
+  .esquerda img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nome {
+    margin: auto 10px;
+  }
+  
+  .direita{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0px;
+  }
+  
+  /*Inicio do notificador*/
+  
+  :root {
+    --notification-max-lines: 3; /* Número máximo de linhas permitidas para o texto da notificação */
+    --notification-line-height: 1.2; /* Altura de cada linha do texto da notificação */
+  }
+  
+  
+  .notification-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+  }
+  
+  /* Estilos do pop-up de notificação */
+  .notification-popup {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 930px;
+    min-height: 570px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid gray;
+    padding: 10px;
+    display: none;
+    border-radius: 15px;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  
+  .notification-popup .popup-title {
+    margin-top: 0;
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+    border-bottom: solid 0.2px blue;
+  }
+  
+  .notification-popup .notification-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .notification-list li .notification-text {
+    max-height: var(--notification-max-lines) * var(--notification-line-height);
+    overflow: hidden;
+  }
+  
+  .notification-actions .delete-all-button {
+    background-color: transparent;
+    color: gray;
+  }
+  
+  .notification-popup li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    word-wrap: break-word;
+  }
+  
+  .notification-popup li span {
+    white-space: nowrap;
+  }
+  
+  .notification-popup .close-button {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+  }
+  
+  .notification-popup .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    border-bottom: solid 0.2px;
+  }
+  
+  .notification-popup .pagination-container button {
+    margin: 0 5px;
+    padding: 3px 8px;
+    background-color: transparent;
+    border: none;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .notification-popup .pagination-container .current-page {
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+  }
+  
+  .notification-popup .notification-page-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    color: white;
+  }
+  
+  .notification-popup::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .notification-popup::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .notification-popup.multi-page .notification-list {
+    max-height: 420px;
+  }
+  
+  .notification-popup.multi-page .pagination-container {
+    border-bottom: none;
+  }
+  
+  .notification-popup.multi-page .notification-page-two {
+    display: block;
+  }
+  
+  /*Final do notificador*/
+  
+  .user {
+    margin: auto 10px;
+  }
+  
+  .user a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .popup-content {
+    margin-top: 20px;
+  }
+  
+  .popup-content a {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .popup-content {
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+  }
+  
+  
+  
+  /* Componete produtos */
+  body{
+    background-color: #fff !important;
+    margin: 0;
+    padding: 0;
+  }
+    
+  /* Aside = Navegação da esquerda*/
+  
+  
+  span{
+    color: grey;
+}
+
+aside{
+    margin: 20px 20px;
+    width: 5%;
+    float: left;
+}
+
+.navegacao{
+    display: flex;
+    flex-wrap: wrap;
+    width:3%;
+}
+
+.resto div{
+    margin-bottom: 30px;
+}
+
+.abrir i{
+    margin-bottom: 25px;
+}
+
+.bar{
+    margin-top: 20px;
+}
+
+.bar .resto a i{
+    margin: 15px auto;
+    align-items: center;
+}
+
+.bar .resto{
+    display: none;
+}
+
+.bar:hover .resto{
+    display: block;
+}
+
+.home{
+    margin: 15px 5px;   
+}
+
+.home:hover{
+    transform: scale(1.1);
+}
+
+.money{
+    margin: 20px 15px;
+}
+
+.money:hover{
+    transform: scale(1.1);
+}
+
+.users1{
+    margin: 20px 5px;
+}
+
+.user1:hover{
+    transform: scale(1.1);
+}
+
+.users2{ 
+    margin: 20px 5px;
+}
+
+.users2:hover{
+    transform: scale(1.1);
+}
+
+.receip{
+    margin: 20px 12px;
+}
+
+.receip:hover{
+    transform: scale(1.1);
+}
+
+.rotate{
+    margin: 20px 10px;
+}
+
+.rotate:hover{
+    transform: scale(1.1);
+}
+
+.navegacao div a{
+    text-decoration: none;
+    color: black;
+}
+  
+  /* Estilos personalizados para os pop-ups */
+  .custom-popup {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .clicked {
+    color: red;
+  }
+  
+  
+  
+  .acessar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+  }
+  
+  .vai {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .vai:hover {
+    transform: scale(1.1);
+  }
+  
+  .vai::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .vai h1 {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .vai p {
+    font-size: 15px;
+    text-align: justify;
+    color: black;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 2;
+  }
+  
+  .vai a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .area-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    padding: 20px;
+    max-width: 60%;
+    width: 23%;
+    display: none;
+  }
+  
+  .popuparea {
+    width: 50%;
+    margin: 40px auto;
+    display: flex;
+  }
+  
+  .popuparea div {
+    margin-top: 30px;
+  }
+  
+  .Area1 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area1 h2 {
+    text-align: center;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+  }
+  
+  .Area2 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area2 h2 {
+    text-align: center;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+  }
+  
+  .Area3 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area3 h2 {
+    text-align: center;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+  }
+  
+  .Area4 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area4 h2 {
+    text-align: center;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+  }
+  
+  .Area5 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area5 h2 {
+    text-align: center;
+    margin: auto;
+    background-color: lightgreen;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+  }
+  
+  .Area6 {
+    display: flex;
+    margin: auto 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 50px;
+    max-width: 60%;
+    width: 23%;
+  }
+  
+  .Area6 h2 {
+    text-align: center;
+    margin: auto;
+    border-radius: 100px;
+    padding: 20px;
+    font-size: 0px;
+    background-color: lightgreen;
+  }
+  
+ 
+  
+
+
+
+
+
+
+  /* Elementos do Rodape */
+  footer 
+  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: black ;
+      clear: both;
+      text-align: center;
+    
+    }
+    
+    
+    .rodape 
+    {
+      
+      text-align: center !important;
+      margin-top: 360px;
+      
+    }
+  
+    .texto-rodape{
+      color: white;
+      font-size: 10px;
+    }
+    footer div ul
+    {
+      list-style: none;
+      
+    }
+    footer div ul li{
+      color: black
+    }
+  

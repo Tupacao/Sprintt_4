@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrada de dados Áreas</title>
+  <link rel="icon" href="/arthur/imagens/logozinha1-2.png">
+  <link rel="stylesheet" href="davi.css">
+  <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <nav>
+      <div class="cabecalho">
+        <div class="esquerda">
+          <div class="logo">
+            <img src="logozinha1-2.png" width="50px" height="50px">
+          </div>
+          <div class="nome">
+            <p> Dinamic Tecnology Count </p>
+          </div>
+        </div>
+        <div class="direita">
+          <div class="user">
+            <a href=""><i class="fa-solid fa-bell fa-xl"></i></a>
+          </div>
+          <div class="notificacao">
+            <a href="#"><i class="fa-solid fa-user fa-xl"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--Barra lateral-->
+  <aside>
+    <div class="navegacao">
+      <div class="bar">
+          <a href="#" class="abrir"><i class="fa-solid fa-list fa-2xl"></i></i></a>
+          <div class="resto">
+            <div class="home">
+              <a href="index.html"><i class="fa-solid fa-house fa-2xl"></i></a>
+          </div>
+
+          <div class="money">
+              <a href="arthur/financias.html"><i class="fa-solid fa-dollar-sign fa-2xl"></i></a>
+          </div>
+
+          <div class="users1">
+              <a href="matheus/cadastrodados.html"><i class="fa-solid fa-users-rectangle fa-2xl"></i></a>
+          </div>
+
+          <div class="users2">
+              <a href="davisad/Sprint 2/pacientes.html"><i class="fa-solid fa-users fa-2xl"></i></a>
+          </div>
+
+          <div class="rotate">
+              <a href="davisad/Sprint 3/davi.html"><i class="fa-solid fa-rotate fa-2xl"></i></a>
+          </div>
+          
+          <div class="rotate">
+              <a href="ana/sprint2/ana1.html"><i class="fa-solid fa-paperclip fa-2xl"></i></a>
+          </div>
+
+          <div class="rotate">
+              <a href="ana/sprint3/ana1.html"><i class="fa-solid fa-file fa-2xl"></i></a>
+          </div>
+
+          <div class="rotate">
+              <a href="Filipe Sprint 3/espacos.html"><i class="fa-solid fa-chart-area fa-2xl"></i></a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </aside>
+
+  <h1>Adicionar áreas do Hospital</h1>
+  <h4>gay</h4>
+  <form id="formCRUD">
+    <label for="area">Área:</label><br>
+    <input type="text" id="area" required placeholder="Nome"><br>
+
+    <label for="capacidade">Capacidade:</label><br>
+    <input type="number" id="capacidade" required placeholder="Pacientes"><br>
+
+    <button type="submit" id="Salvar">Salvar</button>
+  </form>
+
+  <h1 class="infos">Áreas Salvas</h1>
+  <table id="tabelaCRUD">
+    <thead>
+      <tr>
+        <th>Área</th>
+        <th>Capacidade</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <h2>gay</h2>
+  <h3>gay</h3>
+
+  <script>
+    // Função para obter as informações salvas no localStorage
+    function getInformacoes() {
+      return JSON.parse(localStorage.getItem('dadosArea')) || [];
+    }
+
+    // Função para exibir as informações na tabela
+    function exibirInformacoes() {
+      var dadosArea = getInformacoes();
+      var tabela = document.getElementById('tabelaCRUD');
+
+      // Limpar tabela
+      tabela.getElementsByTagName('tbody')[0].innerHTML = '';
+
+      for (var i = 0; i < dadosArea.length; i++) {
+        var informacao = dadosArea[i];
+
+        var linha = document.createElement('tr');
+        var colunaArea = document.createElement('td');
+        var colunaCapacidade = document.createElement('td');
+        var colunaAcoes = document.createElement('td');
+        var botaoEditar = document.createElement('button');
+        var botaoExcluir = document.createElement('button');
+
+        colunaArea.textContent = informacao.area;
+        colunaCapacidade.textContent = informacao.capacidade;
+
+        botaoEditar.textContent = 'Editar';
+        botaoEditar.addEventListener(
+          'click',
+          (function (index) {
+            return function () {
+              editarInformacao(index);
+            };
+          })(i)
+        );
+
+        botaoExcluir.textContent = 'Excluir';
+        botaoExcluir.addEventListener(
+          'click',
+          (function (index) {
+            return function () {
+              excluirInformacao(index);
+            };
+          })(i)
+        );
+
+        colunaAcoes.appendChild(botaoEditar);
+        colunaAcoes.appendChild(botaoExcluir);
+
+        linha.appendChild(colunaArea);
+        linha.appendChild(colunaCapacidade);
+        linha.appendChild(colunaAcoes);
+
+        tabela.getElementsByTagName('tbody')[0].appendChild(linha);
+      }
+    }
+
+    // Função para adicionar ou atualizar uma informação
+    function adicionarAtualizarInformacao(event) {
+      event.preventDefault();
+
+      var area = document.getElementById('area').value;
+      var capacidade = document.getElementById('capacidade').value;
+
+      var dadosArea = getInformacoes();
+
+      var informacao = {
+        area: area,
+        capacidade: capacidade,
+      };
+
+      dadosArea.push(informacao);
+      localStorage.setItem('dadosArea', JSON.stringify(dadosArea));
+
+      // Limpar campos do formulário
+      document.getElementById('area').value = '';
+      document.getElementById('capacidade').value = '';
+
+      exibirInformacoes();
+    }
+
+    // Função para editar uma informação
+    function editarInformacao(index) {
+      var dadosArea = getInformacoes();
+
+      var informacao = dadosArea[index];
+
+      document.getElementById('area').value = informacao.area;
+      document.getElementById('capacidade').value = informacao.capacidade;
+
+      // Remover a informação da lista antes de atualizá-la
+      dadosArea.splice(index, 1);
+      localStorage.setItem('dadosArea', JSON.stringify(dadosArea));
+
+      exibirInformacoes();
+    }
+
+    // Função para excluir uma informação
+    function excluirInformacao(index) {
+      var dadosArea = getInformacoes();
+
+      // Remover a informação da lista
+      dadosArea.splice(index, 1);
+      localStorage.setItem('dadosArea', JSON.stringify(dadosArea));
+
+      exibirInformacoes();
+    }
+
+    // Chamar a função para exibir as informações ao carregar a página
+    exibirInformacoes();
+
+    // Adicionar o evento de submit ao formulário
+    document.getElementById('formCRUD').addEventListener('submit', adicionarAtualizarInformacao);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Technology Count</title>
+
+    <script src="Sprint3.js"></script>
+
+    <link rel="stylesheet" href="Sprint3.css">
+
+    <link rel="icon" href="/arthur/imagens/logozinha1-2.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/8f342eb5e6.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- Cabecalho -->
+    <header>
+
+        <header>
+
+            <nav>
+
+                <div class="cabecalho">
+
+                    <div class="esquerda">
+
+                        <div class="logo">
+
+                            <a href="Sprint2.html"><img src="img/logozinha1-2.png"></a>
+
+                        </div>
+
+                        <div class="nome">
+
+                            <p> Dinamic Tecnology Count </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="nameDisplay">
+                        <script>
+                            // Obter o objeto JSON com os dados do armazenamento local
+                            var userData = JSON.parse(localStorage.getItem("userData"));
+                        
+                            // Verificar se o objeto JSON e o nome existem
+                            if (userData && userData.name) {
+                              // Exibir o nome na página
+                              var nameDisplay = document.getElementById("nameDisplay");
+                              nameDisplay.textContent = "Bem-vindo, " + userData.name;
+                            }
+                          </script>
+
+                    </div>
+
+                    <div class="direita">
+                       
+                        <div class="notification-icon">
+                          
+                            <i class="fas fa-bell fa-2x" onclick="showPopup()"></i>
+                          
+                            <span id="notificationBadge" class="notification-badge"></span>                       
+                            
+                            <div class="notification-popup" id="notificationPopup">
+                            
+                                <h4 class="popup-title">Histórico de Notificações</h4>
+                            
+                                <div class="notification-actions">
+                              
+                                    <button class="delete-all-button" onclick="deleteAllNotifications()">Excluir todas</button>
+                            
+                                </div>
+                            
+                                <ul id="notificationList" class="notification-list"></ul>
+                            
+                                <div class="pagination-container" id="paginationContainer"></div>
+                            
+                                <div class="close-button" onclick="closePopup()">&times;</div>
+                          
+                           
+                            </div>
+
+                        </div>
+                      
+                        <div class="user">
+                          
+                            <a href="#" onclick="openUserPopup()">
+                            
+                                <i class="fa-solid fa-user fa-xl"></i>
+                          
+                            </a>
+                        
+                        </div>
+                      
+                        
+                        <div id="userPopup" class="popup">
+                          
+                            <span class="close-button" onclick="closeUserPopup()">&times;</span>
+
+                          
+                            <div class="popup-content">
+                            
+                                <button onclick="trocarUsuario()">Trocar de Usuário</button>
+                                    <script>function trocarUsuario() {
+                                        // Redirecionar para a página de inserção de nome e mostrar os usuários cadastrados
+                                        window.location.href = "PaginaDeUsuario.html";
+                                      }
+                                      </script>
+                            
+                                <a href="sair.html">Sair</a>
+                         
+                            </div>
+                        
+                        </div>
+                     
+                    </div>
+                      
+
+
+                </div>
+
+            </nav>
+
+
+
+
+
+        </header>
+        <!--Barra lateral -->
+        <aside>
+           
+            <div class="navegacao">
+                <div class="bar">
+                    <a href="#" class="abrir"><i class="fa-solid fa-list fa-2xl"></i></i></a>
+                    <div class="resto">
+                        <div class="home">
+                            <a href="index.html"><i class="fa-solid fa-house fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="money">
+                            <a href="arthur/financias.html"><i class="fa-solid fa-dollar-sign fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="users1">
+                            <a href="matheus/cadastrodados.html"><i class="fa-solid fa-users-rectangle fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="users2">
+                            <a href="davisad/Sprint 2/pacientes.html"><i class="fa-solid fa-users fa-2xl"></i></a>
+                        </div>
+
+                        <div class="rotate">
+                            <a href="davisad/Sprint 3/davi.html"><i class="fa-solid fa-rotate fa-2xl"></i></a>
+                        </div>
+                        
+                        <div class="rotate">
+                            <a href="ana/sprint2/ana1.html"><i class="fa-solid fa-paperclip fa-2xl"></i></a>
+                        </div>
+    
+                        <div class="rotate">
+                            <a href="ana/sprint3/ana1.html"><i class="fa-solid fa-file fa-2xl"></i></a>
+                        </div>
+
+                        <div class="rotate">
+                            <a href="Filipe Sprint 3/espacos.html"><i class="fa-solid fa-chart-area fa-2xl"></i></a>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        </aside>
+
+
+
+
+        <div class="popuparea">
+            <div class="Area1">
+                <h1 class="nome">Area 1</h1>
+                <h2 class="bolinha" onclick="Abrir ()"></h2>
+            </div>
+            <div class="Area2">
+                <h1 class="nome">Area 2</h1>
+                <h2 class="bolinha1" onclick="Abrir1 ()"></h2>
+            </div>
+            <div class="Area3">
+                <h1 class="nome">Area 3</h1>
+                <h2 class="bolinha2" onclick="Abrir2 ()"></h2>
+            </div>
+        </div>
+        <div class="popuparea">
+            <div class="Area4">
+                <h1 class="nome">Area 4</h1>
+                <h2 class="bolinha3" onclick="Abrir3 ()"></h2>
+            </div>
+            <div class="Area5">
+                <h1 class="nome">Area 5</h1>
+                <h2 class="bolinha4" onclick="Abrir4 ()"></h2>
+            </div>
+            <div class="Area6">
+                <h1 class="nome">Area 6</h1>
+                <h2 class="bolinha5" onclick="Abrir5 ()"></h2>
+            </div>
+        </div>
+      
+        <div class="area-overlay" onclick="closeAreaPopup()"></div>
+        
+        <div class="area-popup" id="popup1">
+          <h2>Pop-up 1</h2>
+          <p>Conteúdo do pop-up 1.</p>
+          <p>Lotação maxima de pacientes:<span class="a1"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a2"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a3"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+        <div class="area-popup" id="popup2">
+          <h2>Pop-up 2</h2>
+          <p>Conteúdo do pop-up 2.</p>
+          <p>Lotação maxima de pacientes:<span class="a4"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a5"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a6"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+        <div class="area-popup" id="popup3">
+          <h2>Pop-up 3</h2>
+          <p>Conteúdo do pop-up 3.</p>
+          <p>Lotação maxima de pacientes:<span class="a7"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a8"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a9"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+        <div class="area-popup" id="popup4">
+          <h2>Pop-up 4</h2>
+          <p>Conteúdo do pop-up 4.</p>
+          <p>Lotação maxima de pacientes:<span class="a10"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a11"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a12"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+        <div class="area-popup" id="popup5">
+          <h2>Pop-up 5</h2>
+          <p>Conteúdo do pop-up 5.</p>
+          <p>Lotação maxima de pacientes:<span class="a13"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a14"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a15"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+        <div class="area-popup" id="popup6">
+          <h2>Pop-up 6</h2>
+          <p>Conteúdo do pop-up 6.</p>
+          <p>Lotação maxima de pacientes:<span class="a16"></span></p>
+          <p>Quantidade de enfermeiros:<span class="a17"></span></p>
+          <p>Quantidade de enfermeiros necessários:<span class="a18"></span></p>
+          <button onclick="closeAreaPopup()">Fechar</button>
+        </div>
+
+
+
+
+
+
+
+     
+
+
+
+
+        <footer class="rodape">
+
+            <p class="texto-rodape">© Todos os direitos reservados a Dinamic Tecnology Count 2023.</p>
+
+        </footer>
+
+
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logozinha1-2.png">
+    <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cores2.css">
+    <script src="funcoes2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>CDT</title>
+</head>
+<body onload="Contratar ()">
+    <header>
+
+        <nav>
+
+            <div class="cabecalho">
+
+                <div class="esquerda">
+
+                    <div class="logo">
+                    
+                        <img src="imagens/logozinha1-2.png">
+
+                    </div>
+
+                    <div class="nome">
+
+                        <p> Dinamic Tecnology Count </p>
+
+                    </div>
+
+                </div>
+
+                <div class="direita">
+
+                    <div class="user">
+
+                        <a href="#"><i class="fa-solid fa-bell fa-xl"></i></a>
+                    
+                    </div>
+
+                    <div class="notificacao">
+
+                        <a href="#"><i class="fa-solid fa-user fa-xl"></i></a>
+                        
+                    </div>
+                
+                </div>
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <aside>
+
+        <div class="navegacao">
+            
+            <div class="bar">
+
+                <a href="#" class="abrir"><i class="fa-solid fa-list fa-2xl"></i></i></a>
+                
+                <div class="resto">
+                    
+                    <div class="home">
+                        <a href="index.html"><i class="fa-solid fa-house fa-2xl"></i></a>
+                    </div>
+        
+                    <div class="money">
+                        <a href="arthur/financias.html"><i class="fa-solid fa-dollar-sign fa-2xl"></i></a>
+                    </div>
+        
+                    <div class="users1">
+                        <a href="matheus/cadastrodados.html"><i class="fa-solid fa-users-rectangle fa-2xl"></i></a>
+                    </div>
+        
+                    <div class="users2">
+                        <a href="davisad/Sprint 2/pacientes.html"><i class="fa-solid fa-users fa-2xl"></i></a>
+                    </div>
+
+                    <div class="rotate">
+                        <a href="davisad/Sprint 3/davi.html"><i class="fa-solid fa-rotate fa-2xl"></i></a>
+                    </div>
+                    
+                    <div class="rotate">
+                        <a href="ana/sprint2/ana1.html"><i class="fa-solid fa-paperclip fa-2xl"></i></a>
+                    </div>
+
+                    <div class="rotate">
+                        <a href="ana/sprint3/ana1.html"><i class="fa-solid fa-file fa-2xl"></i></a>
+                    </div>
+
+                    <div class="rotate">
+                        <a href="Filipe Sprint 3/espacos.html"><i class="fa-solid fa-chart-area fa-2xl"></i></a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </aside>
+
+    <section>
+
+        <div class="meio">
+            
+            <div class="esquerda-meio">
+
+                <div class="contratacao">
+                
+                    <h1>CONTRATAÇÃO</h1>
+            
+                </div>
+
+                <div class="dados">
+
+                    <div class="info">
+
+                        <h2> Número de enfermeiros a contratar: <span class="ncontratar-enfermeiro"> XXXXXXX </span> </h2>
+                
+                    </div>
+
+                    <div class="info">
+
+                        <h2> Número de técnicos de enfermagem a contratar: <span class="ncontratar-tecnico"> XXXXXXX </span> </h2>
+                
+                    </div>
+
+                    <div class="info-gasto">
+                        
+                        <h2> Gasto total: <span class="gastotal"> XXXXXXX </span> </h2>
+                
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grafico">
+                
+                <canvas id="Chart1" width="600px" height="500px"></canvas>
+
+                <script>
+
+                    var dados = {
+                        labels: ['Atual', 'A mais'],
+                        datasets: [{
+                            label: 'Gasto',
+                            data: [25000, somaaa],
+                            backgroundColor: 'rgba(211, 211, 211, 0.5)', // Cor de preenchimento das barras
+                            borderColor: 'rgba(54, 162, 235, 1)', // Cor da borda das barras
+                            borderWidth: 1 // Largura da borda das barras
+                        }]
+                    };
+
+                    // Opções do gráfico de barras
+                    var opcoes = {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    };
+
+                    // Criar o gráfico de barras
+                    var ctx = document.getElementById('Chart1').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: dados,
+                        options: opcoes
+                    });
+                    
+                </script>                
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div>
+
+            <p>  </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

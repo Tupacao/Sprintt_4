@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="icon" href="arthur/imagens/logozinha1-2.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Technology Count</title>
+
+    <script src="Meujava.js"></script>
+
+    <link rel="stylesheet" href="Sprint2.css">
+
+    <link rel="icon" href="img/logozinha1-2.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/e65e29a543.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/8f342eb5e6.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- Cabecalho -->
+    <header>
+
+        <header>
+
+            <nav>
+
+                <div class="cabecalho">
+
+                    <div class="esquerda">
+
+                        <div class="logo">
+
+                            <img src="arthur/imagens/logozinha1-2.png">
+
+                        </div>
+
+                        <div class="nome">
+
+                            <p> Dinamic Tecnology Count </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="nameDisplay">
+                        <script>
+                            // Obter o objeto JSON com os dados do armazenamento local
+                            var userData = JSON.parse(localStorage.getItem("userData"));
+                        
+                            // Verificar se o objeto JSON e o nome existem
+                            if (userData && userData.name) {
+                              // Exibir o nome na página
+                              var nameDisplay = document.getElementById("nameDisplay");
+                              nameDisplay.textContent = "Bem-vindo, " + userData.name;
+                            }
+                          </script>
+
+                    </div>
+
+                    <div class="direita">
+                       
+                        <div class="notification-icon">
+                          
+                            <i class="fas fa-bell fa-2x" onclick="showPopup()"></i>
+                          
+                            <span id="notificationBadge" class="notification-badge"></span>                       
+                            
+                            <div class="notification-popup" id="notificationPopup">
+                            
+                                <h4 class="popup-title">Histórico de Notificações</h4>
+                            
+                                <div class="notification-actions">
+                              
+                                    <button class="delete-all-button" onclick="deleteAllNotifications()">Excluir todas</button>
+                            
+                                </div>
+                            
+                                <ul id="notificationList" class="notification-list"></ul>
+                            
+                                <div class="pagination-container" id="paginationContainer"></div>
+                            
+                                <div class="close-button" onclick="closePopup()">&times;</div>
+                          
+                           
+                            </div>
+
+                        </div>
+                      
+                        <div class="user">
+                          
+                            <a href="#" onclick="openUserPopup()">
+                            
+                                <i class="fa-solid fa-user fa-xl"></i>
+                          
+                            </a>
+                        
+                        </div>
+                      
+                        
+                        <div id="userPopup" class="popup">
+                          
+                            <span class="close-button" onclick="closeUserPopup()">&times;</span>
+
+                          
+                            <div class="popup-content">
+                            
+                                <button onclick="trocarUsuario()">Trocar de Usuário</button>
+                                    <script>function trocarUsuario() {
+                                        // Redirecionar para a página de inserção de nome e mostrar os usuários cadastrados
+                                        window.location.href = "PaginaDeUsuario.html";
+                                      }
+                                      </script>
+                            
+                                <a href="sair.html">Sair</a>
+                         
+                            </div>
+                        
+                        </div>
+                     
+                    </div>
+                      
+
+
+                </div>
+
+            </nav>
+
+
+
+
+
+        </header>
+        <!--Barra lateral -->
+        <aside>
+           
+            <div class="navegacao">
+            
+                <div class="bar">
+    
+                    <a href="#" class="abrir"><i class="fa-solid fa-list fa-2xl"></i></i></a>
+                    
+                    <div class="resto">
+                        
+                        <div class="home">
+                            <a href="index.html"><i class="fa-solid fa-house fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="money">
+                            <a href="arthur/financias.html"><i class="fa-solid fa-dollar-sign fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="users1">
+                            <a href="matheus/cadastrodados.html"><i class="fa-solid fa-users-rectangle fa-2xl"></i></a>
+                        </div>
+            
+                        <div class="users2">
+                            <a href="davisad/Sprint 2/pacientes.html"><i class="fa-solid fa-users fa-2xl"></i></a>
+                        </div>
+
+                        <div class="rotate">
+                            <a href="davisad/Sprint 3/davi.html"><i class="fa-solid fa-rotate fa-2xl"></i></a>
+                        </div>
+                        
+                        <div class="rotate">
+                            <a href="ana/sprint2/ana1.html"><i class="fa-solid fa-paperclip fa-2xl"></i></a>
+                        </div>
+    
+                        <div class="rotate">
+                            <a href="ana/sprint3/ana1.html"><i class="fa-solid fa-file fa-2xl"></i></a>
+                        </div>
+
+                        <div class="rotate">
+                            <a href="Filipe Sprint 3/espacos.html"><i class="fa-solid fa-chart-area fa-2xl"></i></a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+    
+            </div>
+        
+        </aside>
+        
+        </aside>
+
+
+        <section>
+            <div class="acessar" id="dynamicCount">
+                <!-- Os retângulos serão adicionados dinamicamente aqui -->
+            </div>
+        </section>
+    
+
+
+
+
+
+        <footer class="rodape">
+
+            <p class="texto-rodape">© Todos os direitos reservados a Dinamic Tecnology Count 2023.</p>
+
+        </footer>
+
+
+
+
+    
+</body>
+
+</html>

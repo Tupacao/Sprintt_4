@@ -1,0 +1,235 @@
+/*Definições Gerais*/
+html{
+    height: 100%;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+/* Header */
+.cabecalho{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+}
+.nome {
+    margin: auto 10px;
+}
+.esquerda{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 20px;
+}
+.esquerda img {
+    width: 50px;
+    height: 50px;
+}
+.direita{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0px;
+}
+.notificacao{
+    margin: auto 10px;
+}
+
+.notificacao a {
+    text-decoration: none;
+    color: white;
+}
+
+.user{
+    margin: auto 10px;
+}
+
+.user a {
+    text-decoration: none;
+    color: white;
+}
+/* FIM Header */
+/* Aside*/
+span{
+    color: grey;
+}
+
+aside{
+    margin: 20px 20px;
+    width: 5%;
+    float: left;
+}
+
+.navegacao{
+    display: flex;
+    flex-wrap: wrap;
+    width:3%;
+}
+
+.resto div{
+    margin-bottom: 30px;
+}
+
+.abrir i{
+    margin-bottom: 25px;
+}
+
+.bar{
+    margin-top: 20px;
+}
+
+.bar .resto a i{
+    margin: 15px auto;
+    align-items: center;
+}
+
+.bar .resto{
+    display: none;
+}
+
+.bar:hover .resto{
+    display: block;
+}
+
+.home{
+    margin: 15px 5px;   
+}
+
+.home:hover{
+    transform: scale(1.1);
+}
+
+.money{
+    margin: 20px 15px;
+}
+
+.money:hover{
+    transform: scale(1.1);
+}
+
+.users1{
+    margin: 20px 5px;
+}
+
+.user1:hover{
+    transform: scale(1.1);
+}
+
+.users2{ 
+    margin: 20px 5px;
+}
+
+.users2:hover{
+    transform: scale(1.1);
+}
+
+.receip{
+    margin: 20px 12px;
+}
+
+.receip:hover{
+    transform: scale(1.1);
+}
+
+.rotate{
+    margin: 20px 10px;
+}
+
+.rotate:hover{
+    transform: scale(1.1);
+}
+
+.navegacao div a{
+    text-decoration: none;
+    color: black;
+}
+/*FIM Aside*/
+/*Body*/
+.corpo{
+    background-color: lightgray;
+    width: 90%;
+    float: right;
+    padding-bottom: 28.5%;
+    margin-right: 2%;
+
+}
+h1{
+    background-color: black;
+    color: white;
+    width: 90%;
+    float: right;
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 2%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.PN{
+    display: block;
+    text-align: center;
+    margin-left:34%;
+    margin-top:5%;
+    font-size: 200%;
+    width: 32%;
+}
+#area{
+    display: block;
+    text-align: center;
+    margin-left:34%;
+    margin-top:1%;
+    font-size: 200%;
+    width: 32%;
+}
+#fugulin{
+    display: block;
+    text-align: center;
+    margin-left:34%;
+    margin-top:1%;
+    font-size: 200%;
+    width: 32%;
+}
+.enviar{
+    display: block;
+    text-align: center;
+    margin-left:46%;
+    margin-top:1%;
+    font-size: 200%;
+    cursor: pointer;
+}
+/*FIM Body*/
+/*Footer*/
+.footer{
+    background-color: black;
+    width: 100%;
+    position: relative;
+    color: white;
+    padding: 20px;
+    bottom: 0;
+    float: right;
+    
+}
+
+/* tavela*/
+
+table {
+    border-collapse: collapse;
+    background-color: lightgray;
+    width: 90%;
+    margin-left: 8%;
+    padding-bottom: 5%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+}
+/* FIM tavela*/
+
+h2{
+    color: white;
+    padding: 2%;
+    font-size: 10%;
+}

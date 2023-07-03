@@ -1,0 +1,300 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header do Site*/
+
+.cabecalho {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+}
+
+.esquerda {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 20px;
+}
+
+.esquerda img {
+  width: 50px;
+  height: 50px;
+}
+
+.nome {
+  margin: auto 10px;
+}
+
+.direita {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0px;
+}
+
+.notificacao {
+  margin: auto 10px;
+}
+
+.notificacao a {
+  text-decoration: none;
+  color: white;
+}
+
+.user {
+  margin: auto 10px;
+}
+
+.user a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Aside = NavegaÃ§Ã£o da esquerda*/
+
+span{
+  color: grey;
+}
+
+aside{
+  margin: 20px 20px;
+  width: 5%;
+  float: left;
+}
+
+.navegacao{
+  display: flex;
+  flex-wrap: wrap;
+  width:3%;
+}
+
+.resto div{
+  margin-bottom: 30px;
+}
+
+.abrir i{
+  margin-bottom: 25px;
+}
+
+.bar{
+  margin-top: 20px;
+}
+
+.bar .resto a i{
+  margin: 15px auto;
+  align-items: center;
+}
+
+.bar .resto{
+  display: none;
+}
+
+.bar:hover .resto{
+  display: block;
+}
+
+.home{
+  margin: 15px 5px;   
+}
+
+.home:hover{
+  transform: scale(1.1);
+}
+
+.money{
+  margin: 20px 15px;
+}
+
+.money:hover{
+  transform: scale(1.1);
+}
+
+.users1{
+  margin: 20px 5px;
+}
+
+.user1:hover{
+  transform: scale(1.1);
+}
+
+.users2{ 
+  margin: 20px 5px;
+}
+
+.users2:hover{
+  transform: scale(1.1);
+}
+
+.receip{
+  margin: 20px 12px;
+}
+
+.receip:hover{
+  transform: scale(1.1);
+}
+
+.rotate{
+  margin: 20px 10px;
+}
+
+.rotate:hover{
+  transform: scale(1.1);
+}
+
+.navegacao div a{
+  text-decoration: none;
+  color: black;
+}
+
+user
+/* Inicio do Botao de Busca*/
+.titulo-e-busca {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.titulo-e-busca input[type='text'] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+
+.titulo-e-busca button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+/* Fim do Botao de Busca*/
+
+/* Info-enfermeiros(main content)*/
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo {
+  font-size: 18px;
+  color: white;
+  background-color: #000000;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 3px;
+  width: 90.3%;
+  text-align: center;
+}
+
+.id-paciente,
+.nome-paciente,
+.escala-fugulin,
+.ala-hospital {
+  display: table-cell;
+  padding: 5px;
+  border: 1px solid rgb(33, 33, 33);
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.tabela-tecnicos-enfermagem-linha-cabecalho {
+  background-color: rgb(0, 0, 0);
+  color: rgb(253, 253, 253);
+}
+
+.linha {
+  display: flex;
+  padding: 5px;
+  border: 1px solid black;
+  width: 90%;
+}
+
+.linha div {
+  flex-grow: 1;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos adicionais para cada coluna */
+.nome-pacientes {
+  flex-basis: 30%;
+}
+
+.id-paciente,
+.nome-paciente,
+.escala-fugulin,
+.ala-hospital {
+  flex-basis: 14%;
+  text-align: center;
+}
+
+/* Estilos para tabela de Enfermeiros */
+/*.tabela-enfermeiros {
+    background-color: white;
+    color: black;
+}*/
+
+.tabela-pacientes .linha {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para tabela de TÃ©cnicos de Enfermagem */
+/*.tabela-tecnicos-enfermagem {
+    background-color: white;
+    color: black;
+} */
+
+.tabela-tecnicos-enfermagem .linha {
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  background-color: lightgray;
+  width: 90%;
+  margin-left: 0%;
+  padding-bottom: 5%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  
+}
+/* FIM tavela*/
+
+h2{
+  color: white;
+  padding: 2%;
+  font-size: 10%;
+}
+h1{
+  background-color: black;
+  color: white;
+  width: 90%;
+  float: right;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 2%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}

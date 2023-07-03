@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header do Site*/
+
+.cabecalho{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+}
+
+.esquerda{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 20px;
+}
+
+.esquerda img {
+    width: 50px;
+    height: 50px;
+}
+
+.nome {
+    margin: auto 10px;
+}
+
+.direita{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0px;
+}
+
+.notificacao{
+    margin: auto 10px;
+}
+
+.notificacao a {
+    text-decoration: none;
+    color: white;
+}
+
+.user{
+    margin: auto 10px;
+}
+
+.user a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Aside = Navegação da esquerda*/
+
+span{
+    color: grey;
+}
+
+aside{
+    margin: 20px 20px;
+    width: 5%;
+    float: left;
+}
+
+.navegacao{
+    display: flex;
+    flex-wrap: wrap;
+    width:3%;
+}
+
+.resto div{
+    margin-bottom: 30px;
+}
+
+.abrir i{
+    margin-bottom: 25px;
+}
+
+.bar{
+    margin-top: 20px;
+}
+
+.bar .resto a i{
+    margin: 15px auto;
+    align-items: center;
+}
+
+.bar .resto{
+    display: none;
+}
+
+.bar:hover .resto{
+    display: block;
+}
+
+.home{
+    margin: 15px 5px;   
+}
+
+.home:hover{
+    transform: scale(1.1);
+}
+
+.money{
+    margin: 20px 15px;
+}
+
+.money:hover{
+    transform: scale(1.1);
+}
+
+.users1{
+    margin: 20px 5px;
+}
+
+.user1:hover{
+    transform: scale(1.1);
+}
+
+.users2{ 
+    margin: 20px 5px;
+}
+
+.users2:hover{
+    transform: scale(1.1);
+}
+
+.receip{
+    margin: 20px 12px;
+}
+
+.receip:hover{
+    transform: scale(1.1);
+}
+
+.rotate{
+    margin: 20px 10px;
+}
+
+.rotate:hover{
+    transform: scale(1.1);
+}
+
+.navegacao div a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Section = meio do site */
+
+section{
+    width: 80%;
+    float: right;
+    margin-top: 70px;
+    margin-right: 100px;
+    margin-bottom: 127px;
+}
+
+.meio{
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.meio .grafico{
+    margin: auto;
+}
+
+.esquerda-meio{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+.esquerda-meio .financeiro{
+    color: white;
+    background-color: black;
+    height: 60px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.esquerda-meio .dados {
+    margin: auto 40px;
+    font-size: 10px;
+}
+
+.info{
+    margin: 10px 0px 5px 0px;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.info:hover{
+    translate: 10px;
+}
+
+.info-gasto{
+    margin: 20px 0px 5px 0px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.info span{
+    font-size: 20px;
+}
+
+.grafico{
+    max-width: 45%;
+}
+
+/* Footer */
+
+footer{
+    clear: both;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 33.75px;
+}
+
