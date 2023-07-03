@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           title: 'Espaços',
           description: 'Áreas do hospital',
-          link: '/Filipe Sprint 3/espacos.html',
+          link: 'Filipe Sprint 3/espacos.html',
           image: 'https://static.vecteezy.com/ti/vetor-gratis/p1/3685591-exame-para-virus-cor-plana-ilustracao-clinica-diagnostico-tirando-amostras-pacientes-e-medicos-2d-cartoon-personagens-com-espaco-hospital-espaco-azul-interior-sobre-fundo-vetor.jpg'
         }
     ];
